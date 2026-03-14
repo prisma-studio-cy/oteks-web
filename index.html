@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="tr">
+<!-- Vercel Force Update: 2026-02-15 17:45 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oteks - Premium Hospitality Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <style>
+        /* Landing-Specific Overrides */
+        body {
+            overflow: hidden;
+            height: 100vh;
+            background: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hide Header on Index */
+        .ots-header,
+        .ots-mobile-nav,
+        .ots-burger {
+            display: none !important;
+        }
+
+        /* Loader */
+        #ots-loader {
+            position: fixed;
+            inset: 0;
+            background: #000;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1s ease 1s, visibility 1s ease 1s;
+            /* Delay fade out to let animation finish */
+        }
+
+        body.loaded #ots-loader {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        /* SVG Animation */
+        .ots-svg-logo {
+            width: 300px;
+            /* Adjust size as needed */
+            max-width: 80vw;
+            height: auto;
+        }
+
+        .ots-svg-logo path {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2;
+            stroke-dasharray: 20000;
+            stroke-dashoffset: 20000;
+            animation: line-anim 6s ease forwards, fill-anim 2s ease forwards 6s;
+            opacity: 0;
+        }
+
+        @keyframes line-anim {
+            0% {
+                stroke-dashoffset: 20000;
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fill-anim {
+            0% {
+                fill: transparent;
+                stroke: #fff;
+                filter: drop-shadow(0 0 0 transparent);
+            }
+
+            100% {
+                fill: #fff;
+                stroke: #fff;
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+            }
+        }
+
+        /* Grid Layout */
+        .ots-grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            width: 100vw;
+            height: 100vh;
+            gap: 0;
+            opacity: 0;
+            transition: opacity 1.5s ease 0.5s;
+        }
+
+        body.loaded .ots-grid-container {
+            opacity: 1;
+        }
+
+        .ots-grid-item {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            background: #000;
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            /* Removed transform-style and 3d perspective */
+        }
+
+        .ots-grid-item img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5);
+            /* Darker default */
+            transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1), filter 0.5s ease;
+            z-index: 1;
+            display: block;
+            /* Eliminate inline spacing */
+        }
+
+        .ots-grid-item:hover img {
+            filter: brightness(0.8);
+            transform: scale(1.03);
+            /* Subtle scale, no 3D */
+        }
+
+        .ots-grid-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            transition: background 0.3s ease;
+        }
+
+
+
+        .ots-grid-title {
+            font-size: clamp(14px, 1.8vw, 18px);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            color: #fff;
+            transition: all 0.5s ease;
+            opacity: 0.8;
+        }
+
+        .ots-grid-item:hover .ots-grid-title {
+            color: #fff;
+            letter-spacing: 12px;
+            /* Expanding text effect */
+            opacity: 1;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        }
+
+        .ots-grid-logo {
+            background: #000;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            /* Logo center might not need to be clickable unless it goes somewhere */
+        }
+
+        /* Logo Fade In Matching Loader Position */
+        .ots-center-logo-svg {
+            width: 40%;
+            height: auto;
+            opacity: 0;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+            transition: opacity 1s ease 1s;
+            /* Delay to match grid reveal */
+        }
+
+        body.loaded .ots-center-logo-svg {
+            opacity: 1;
+        }
+
+        .ots-center-logo-svg path {
+            fill: #fff;
+        }
+
+        @media (max-width: 1024px) {
+            .ots-grid-container {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                overflow-y: auto !important;
+                height: auto !important;
+            }
+
+            .ots-grid-container {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+                overflow: visible;
+            }
+
+            .ots-grid-item {
+                width: 100%;
+                height: 50vh;
+                min-height: 250px;
+            }
+
+            /* Show center logo on mobile and put it at top */
+            .ots-grid-logo {
+                display: flex;
+                order: -1;
+                height: 25vh;
+                /* Smaller height for logo header */
+                min-height: 150px;
+                background: #000;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .ots-center-logo-svg {
+                width: 60%;
+                /* Make logo slightly larger on mobile */
+            }
+        }
+
+        /* FIX: Hakkımızda Image Scaling */
+        a[href="hakkimizda.html"] img {
+            transform: scale(1.65);
+            object-position: center 30%;
+            /* Shift focus up to crop bottom bar */
+        }
+
+        a[href="hakkimizda.html"]:hover img {
+            transform: scale(1.75);
+        }
+    </style>
+</head>
+
+<body class="ots-standardized">
+
+    <!-- Loader with Animated SVG -->
+    <div id="ots-loader">
+        <svg class="ots-svg-logo" xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 571 184">
+            <g>
+                <path
+                    d="M235.46,115.93c-7.92,3.82-16.89,3.68-24.62.7-5.28-2.04-8.53-8.2-8.77-14.1-.58-14.16-.61-28.27.02-42.31.45-9.93,8.47-15.65,17.67-15.51,5.69.09,11.39-.15,16.29,2.86,4.69,2.88,7.17,9.04,7.42,14.69.58,13.15.63,25.96-.04,39.08-.28,5.54-2.66,12.03-7.96,14.58ZM236.87,100.85c.29-13.41.31-25.71-.1-39.03-.1-3.38-2.94-8.88-6.13-9.39-5.36-.86-10.39-.87-15.67-.04-3.63.57-6.79,6.01-6.8,9.77l-.04,38.25c0,3.07,1.8,7.4,3.69,8.92,4.22,3.41,16.93,3.43,20.91.26,1.95-1.55,4.07-5.64,4.14-8.74Z" />
+                <path
+                    d="M518.86,116.96c-5.45-1.68-7.32-7.13-7.68-12.02l-.68-9.16,6.72-.02.49,8.8c.24,4.27,3.61,7.15,7.73,7.16l11.22.02c9.34.02,8-11.97,7.43-18.71-.28-3.25-3.82-6.26-6.91-6.87l-15.86-3.14c-3.09-.61-6.41-2.29-7.65-5.5-2.92-7.6-4.93-28.54,8.02-31.63,7.56-1.81,16.69-2.21,23.67,2.01,4.97,3.01,5.74,10.85,5.08,16.08-.3,1.39-4.76,1.54-5.65.47-.96-3.19-.37-9.88-4.33-11.43-4.97-1.94-12.82-1.79-17.78-.14-5.67,1.88-4.91,16.91-2.32,20.45,3.24,4.43,12.54,3.59,23.24,7.31,2.92,1.02,6.81,4.81,6.89,7.89.26,10.5,2.45,24.88-6.9,28.07-8.09,2.76-16.42,2.92-24.71.37Z" />
+                <path
+                    d="M474.64,115.14c-.59,2.54-6.28,2.71-7.98.47l-23.93-31.43c-.45-.59-2.06-1.32-2.58-1.28s-1.39,1.57-1.39,2.09l-.17,30.84c-.31,1.66-6.71,1.33-6.83-.37l.02-67.47c.06-2.04,6-2.47,6.75-.81l.22,26.63c0,.6.56,2.06.8,2.57.33.7,3.1.24,3.77-.64l21.53-28.55c1.11-1.47,4.95-1.11,7.45-.32l-24.3,33.07,26.65,35.18Z" />
+                <path
+                    d="M388.65,82.72l-22.01.11-.04,27.39,23.44.15c.4,1.58.46,4.28.24,6.49h-30.84s.04-70.6.04-70.6l30.19-.02c.9,1.4,1.03,4.42.64,6.69l-23.73.13.08,23.45,21.91.25.08,5.97Z" />
+                <path
+                    d="M304.67,114.46c0,2.92-4.76,3.12-6.83,1.51l-.22-62.62-13.77-.64c-1.69-.08-1.55-5.89.1-6.42l35.66-.08.17,6.62-15.03.44-.07,61.19Z" />
+                <path
+                    d="M89.1,163.42H14.96s-.19-14.44-.19-14.44L0,148.85v-74c1.11-.96,3.03-.99,4.13,0v69.84c3.67.13,6.99.14,10.71-.14l.02-129.66,130.24-.04-.1-11.03-70.53-.03c-.29-1.39-.29-2.74.38-3.8h74.05s.2,14.82.2,14.82l14.89.07.02,74.18c-1.08.7-2.35.68-3.79.21l-.05-70.49-11.15.09v130.01s-130.14.04-130.14.04l-.03,10.31,69.94.05c1.05,0,1.05,2.98.32,4.12ZM145.18,142.04l-.07-123.28-126.36.02v125.96s125.49.02,125.49.02c.65,0,.97-1.67.94-2.72Z" />
+                <path
+                    d="M90.37,117.03l-19.56.14c-7.2-.92-12.79-5.75-13.76-13.01v-49.94c1.04-7.13,6.64-12.06,13.72-13.01l19.06.06c7.19.02,13.02,5.6,14.52,12.48v50.43c-.99,6.92-6.62,12.81-13.98,12.87ZM89.38,111.23c4.98.02,9.16-3.93,9.16-9.1v-45.83c-.01-4.59-3.66-9-8.19-9.01h-19.29c-3.94-.02-8.04,3.73-8.06,7.96l-.18,45.63c-.02,5.32,3.02,10.27,8.83,10.29l17.74.06Z" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- Hidden standard header, removed from layout via CSS -->
+
+    <div class="ots-grid-container">
+        <!-- 1. HAKKIMIZDA -->
+        <a href="hakkimizda.html" class="ots-grid-item">
+            <img src="assets/0 1. ABOUT US.webp" alt="Hakkımızda" fetchpriority="high">
+            <div class="ots-grid-content"><span class="ots-grid-title">HAKKIMIZDA</span></div>
+        </a>
+
+        <!-- 2. URUNLER -->
+        <a href="urunlerimiz.html" class="ots-grid-item">
+            <img src="assets/0 4 OUR PRODUCTS.webp" alt="Ürünler" fetchpriority="high">
+            <div class="ots-grid-content"><span class="ots-grid-title">ÜRÜNLERİMİZ</span></div>
+        </a>
+
+        <!-- 3. TEKLIF AL -->
+        <a href="teklif-al.html" class="ots-grid-item">
+            <img src="assets/0 3 GET OFFER.webp" alt="Teklif Al">
+            <div class="ots-grid-content"><span class="ots-grid-title">TEKLİF AL</span></div>
+        </a>
+
+        <!-- 4. REFERANSLAR -->
+        <a href="referanslarimiz.html" class="ots-grid-item">
+            <img src="assets/0 5 REFERENCES.webp" alt="Referanslar">
+            <div class="ots-grid-content"><span class="ots-grid-title">REFERANSLARIMIZ</span></div>
+        </a>
+
+        <!-- 5. CENTER LOGO -->
+        <div class="ots-grid-item ots-grid-logo">
+            <svg class="ots-center-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 571 184">
+                <g>
+                    <path
+                        d="M235.46,115.93c-7.92,3.82-16.89,3.68-24.62.7-5.28-2.04-8.53-8.2-8.77-14.1-.58-14.16-.61-28.27.02-42.31.45-9.93,8.47-15.65,17.67-15.51,5.69.09,11.39-.15,16.29,2.86,4.69,2.88,7.17,9.04,7.42,14.69.58,13.15.63,25.96-.04,39.08-.28,5.54-2.66,12.03-7.96,14.58ZM236.87,100.85c.29-13.41.31-25.71-.1-39.03-.1-3.38-2.94-8.88-6.13-9.39-5.36-.86-10.39-.87-15.67-.04-3.63.57-6.79,6.01-6.8,9.77l-.04,38.25c0,3.07,1.8,7.4,3.69,8.92,4.22,3.41,16.93,3.43,20.91.26,1.95-1.55,4.07-5.64,4.14-8.74Z" />
+                    <path
+                        d="M518.86,116.96c-5.45-1.68-7.32-7.13-7.68-12.02l-.68-9.16,6.72-.02.49,8.8c.24,4.27,3.61,7.15,7.73,7.16l11.22.02c9.34.02,8-11.97,7.43-18.71-.28-3.25-3.82-6.26-6.91-6.87l-15.86-3.14c-3.09-.61-6.41-2.29-7.65-5.5-2.92-7.6-4.93-28.54,8.02-31.63,7.56-1.81,16.69-2.21,23.67,2.01,4.97,3.01,5.74,10.85,5.08,16.08-.3,1.39-4.76,1.54-5.65.47-.96-3.19-.37-9.88-4.33-11.43-4.97-1.94-12.82-1.79-17.78-.14-5.67,1.88-4.91,16.91-2.32,20.45,3.24,4.43,12.54,3.59,23.24,7.31,2.92,1.02,6.81,4.81,6.89,7.89.26,10.5,2.45,24.88-6.9,28.07-8.09,2.76-16.42,2.92-24.71.37Z" />
+                    <path
+                        d="M474.64,115.14c-.59,2.54-6.28,2.71-7.98.47l-23.93-31.43c-.45-.59-2.06-1.32-2.58-1.28s-1.39,1.57-1.39,2.09l-.17,30.84c-.31,1.66-6.71,1.33-6.83-.37l.02-67.47c.06-2.04,6-2.47,6.75-.81l.22,26.63c0,.6.56,2.06.8,2.57.33.7,3.1.24,3.77-.64l21.53-28.55c1.11-1.47,4.95-1.11,7.45-.32l-24.3,33.07,26.65,35.18Z" />
+                    <path
+                        d="M388.65,82.72l-22.01.11-.04,27.39,23.44.15c.4,1.58.46,4.28.24,6.49h-30.84s.04-70.6.04-70.6l30.19-.02c.9,1.4,1.03,4.42.64,6.69l-23.73.13.08,23.45,21.91.25.08,5.97Z" />
+                    <path
+                        d="M304.67,114.46c0,2.92-4.76,3.12-6.83,1.51l-.22-62.62-13.77-.64c-1.69-.08-1.55-5.89.1-6.42l35.66-.08.17,6.62-15.03.44-.07,61.19Z" />
+                    <path
+                        d="M89.1,163.42H14.96s-.19-14.44-.19-14.44L0,148.85v-74c1.11-.96,3.03-.99,4.13,0v69.84c3.67.13,6.99.14,10.71-.14l.02-129.66,130.24-.04-.1-11.03-70.53-.03c-.29-1.39-.29-2.74.38-3.8h74.05s.2,14.82.2,14.82l14.89.07.02,74.18c-1.08.7-2.35.68-3.79.21l-.05-70.49-11.15.09v130.01s-130.14.04-130.14.04l-.03,10.31,69.94.05c1.05,0,1.05,2.98.32,4.12ZM145.18,142.04l-.07-123.28-126.36.02v125.96s125.49.02,125.49.02c.65,0,.97-1.67.94-2.72Z" />
+                    <path
+                        d="M90.37,117.03l-19.56.14c-7.2-.92-12.79-5.75-13.76-13.01v-49.94c1.04-7.13,6.64-12.06,13.72-13.01l19.06.06c7.19.02,13.02,5.6,14.52,12.48v50.43c-.99,6.92-6.62,12.81-13.98,12.87ZM89.38,111.23c4.98.02,9.16-3.93,9.16-9.1v-45.83c-.01-4.59-3.66-9-8.19-9.01h-19.29c-3.94-.02-8.04,3.73-8.06,7.96l-.18,45.63c-.02,5.32,3.02,10.27,8.83,10.29l17.74.06Z" />
+                </g>
+            </svg>
+        </div>
+
+        <!-- 6. ILETISIM -->
+        <a href="iletisim.html" class="ots-grid-item">
+            <img src="assets/0 2 CONTACT US.webp" alt="İletişim">
+            <div class="ots-grid-content"><span class="ots-grid-title">İLETİŞİM</span></div>
+        </a>
+    </div>
+
+    <script src="js/main.min.js"></script>
+    <script>
+        // Simple loader completion event
+        window.addEventListener('load', () => {
+            // Let the animation play slightly longer if needed, or just add class
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 8800); // 6s line + 2s fill + 0.8s buffer
+        });
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+
+</html>

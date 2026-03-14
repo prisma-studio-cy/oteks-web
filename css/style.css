@@ -1,0 +1,300 @@
+:root {
+    --primary: #c9a050;
+    --bg-dark: #000000;
+    --bg-light: #ffffff;
+    --bg-secondary: #0a0a0a;
+    --text-light: #f5f5f7;
+    --text-dark: #000000;
+    --text-gray: #86868b;
+    --border: rgba(255, 255, 255, 0.1);
+    --border-light: rgba(0, 0, 0, 0.1);
+    --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0 !important;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+    /* Ensure it stays contained */
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background: #000000;
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+li {
+    color: inherit;
+}
+
+/* Cinematic Header */
+.ots-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: saturate(180%) blur(20px);
+    z-index: 2001;
+    border-bottom: 1px solid var(--border);
+}
+
+.ots-logo img {
+    height: 45px;
+    filter: invert(1);
+}
+
+.ots-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 35px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: var(--transition);
+    opacity: 0.6;
+}
+
+.ots-nav a:hover,
+.ots-nav a.active {
+    opacity: 1;
+    color: var(--primary);
+}
+
+/* Custom Cursor */
+#ots-cursor {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--primary);
+    pointer-events: none;
+    z-index: 10000;
+    mix-blend-mode: difference;
+    left: 0;
+    top: 0;
+    will-change: transform;
+}
+
+/* Page Hero Defaults */
+.ots-page-hero,
+.ots-contact-hero,
+.ots-offer-hero,
+.ots-banner {
+    padding: 160px 8% 80px;
+    background: var(--bg-dark);
+    color: #fff !important;
+    text-align: left;
+    position: relative;
+}
+
+.ots-page-hero h1,
+.ots-contact-hero h1,
+.ots-offer-hero h1,
+.ots-banner h1 {
+    color: #fff !important;
+    font-size: 72px;
+    font-weight: 800;
+    letter-spacing: -4px;
+    margin: 0;
+    line-height: 1.1;
+    position: relative;
+    z-index: 2;
+}
+
+.ots-page-hero p,
+.ots-offer-hero p {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Unified Spacing (120px) */
+.ots-section {
+    padding: 120px 8%;
+}
+
+/* Footer */
+.ots-footer {
+    background: #000;
+    color: #fff;
+    padding: 120px 8%;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.ots-footer p {
+    opacity: 0.6;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* Utility Classes */
+.dark-bg {
+    background: var(--bg-dark);
+    color: #fff;
+}
+
+.light-bg {
+    background: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+@media (max-width: 1024px) {
+    .ots-section {
+        padding: 60px 20px;
+    }
+}
+
+/* Premium Mobile Menu Overlay */
+.ots-mobile-nav {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.ots-mobile-nav.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ots-mobile-nav a {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: var(--transition);
+}
+
+.ots-mobile-nav a:hover {
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+/* Hamburger UI */
+.ots-burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    cursor: pointer;
+    z-index: 3001;
+    position: relative;
+    /* Ensure z-index works */
+}
+
+.ots-burger span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    margin: 6px 0;
+    transition: var(--transition);
+}
+
+/* Animation for Burger */
+.ots-burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.ots-burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ots-burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -7px);
+}
+
+@media (max-width: 1024px) {
+    .ots-burger {
+        display: block;
+    }
+
+    .ots-nav {
+        display: none;
+    }
+
+    .ots-page-hero h1,
+    .ots-contact-hero h1,
+    .ots-offer-hero h1,
+    .ots-banner h1 {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    /* Mobile Margins Fix */
+    .ots-page-hero,
+    .ots-contact-hero,
+    .ots-offer-hero,
+    .ots-banner {
+        padding: 120px 20px 60px;
+    }
+}
+
+/* Storytelling Section Accessibility */
+.ots-story-section.dark h2 {
+    color: #fff !important;
+}
+
+.ots-story-section.dark p {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.ots-story-section.light h2 {
+    color: #000 !important;
+}
+
+.ots-story-section.light p {
+    color: #333 !important;
+}

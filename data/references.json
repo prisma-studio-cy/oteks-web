@@ -1,0 +1,77 @@
+[
+    {
+        "id": "ref_1",
+        "name": "Arkın Group (Colony Hotel Casino-Arkın Palm Beach Hotel-Arkın İskele-Palm Beach Hotel)",
+        "img": "assets/REFERENCES/REFERENCES/arkin-group-logo.webp"
+    },
+    {
+        "id": "ref_2",
+        "name": "Elexus Hotel & Casino",
+        "img": "assets/REFERENCES/REFERENCES/elexus-hotel-logo.webp"
+    },
+    {
+        "id": "ref_3",
+        "name": "Chamada Prestige Hotel",
+        "img": "assets/REFERENCES/REFERENCES/chamada-logo.webp"
+    },
+    {
+        "id": "ref_5",
+        "name": "Lord Palace Hotel&Casino",
+        "img": "assets/REFERENCES/REFERENCES/lords-palace.webp"
+    },
+    {
+        "id": "ref_6",
+        "name": "Acapulco Hotel&Casino",
+        "img": "assets/REFERENCES/REFERENCES/acapulco.webp"
+    },
+    {
+        "id": "ref_7",
+        "name": "Cratos Premium Hotel&Casino",
+        "img": "assets/REFERENCES/REFERENCES/Cratos-Hotel.webp"
+    },
+    {
+        "id": "ref_8",
+        "name": "Kaya Palazzo Hotel& Casino",
+        "img": "assets/REFERENCES/REFERENCES/kaya-palazzo.webp"
+    },
+    {
+        "id": "ref_9",
+        "name": "Concorde Bafra-Concorde Tower Hotel&Casino",
+        "img": "assets/REFERENCES/REFERENCES/concorde.webp"
+    },
+    {
+        "id": "ref_10",
+        "name": "Kaya Artemis Hotel&Casino",
+        "img": "assets/REFERENCES/REFERENCES/kaya-artemis.webp"
+    },
+    {
+        "id": "ref_11",
+        "name": "Limak Hotel",
+        "img": "assets/REFERENCES/REFERENCES/limak-logo.webp"
+    },
+    {
+        "id": "ref_12",
+        "name": "Grand Sapphire Hotel&Casino",
+        "img": "assets/REFERENCES/REFERENCES/grand-sapphire.webp"
+    },
+    {
+        "id": "ref_13",
+        "name": "Salamis Hotel",
+        "img": "assets/REFERENCES/REFERENCES/salamis.webp"
+    },
+    {
+        "id": "ref_14",
+        "name": "Golf Korenium Hotel",
+        "img": "assets/REFERENCES/REFERENCES/korineum-logo.webp"
+    },
+    {
+        "id": "ref_15",
+        "name": "Les Ambassodour Hotel&Casino",
+        "img": "assets/REFERENCES/REFERENCES/les-ambassador.webp"
+    },
+    {
+        "id": "ref_16",
+        "name": "Gillham wineyard Hotel",
+        "img": "assets/REFERENCES/REFERENCES/gillham.webp"
+    }
+]

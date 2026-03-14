@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referanslarımız - Oteks Premium Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <style>
+        /* References Special Styles */
+        body {
+            background: var(--bg-dark);
+        }
+
+        .ots-banner {
+            height: 45vh;
+            background: url('assets/0 5 REFERENCES - CATEGORY BANNER.webp') no-repeat center center/cover;
+            display: flex;
+            align-items: flex-end;
+            padding: 60px 8%;
+            position: relative;
+        }
+
+        .ots-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.1));
+        }
+
+        .ots-banner h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 72px;
+            font-weight: 800;
+            letter-spacing: -4px;
+            line-height: 0.9;
+        }
+
+        .ots-ref-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+        }
+
+        .ots-ref-card {
+            background: #000000;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            border: 0.5px solid transparent;
+            padding: 20px;
+        }
+
+        .ots-ref-card:hover {
+            background: #111111;
+            z-index: 10;
+            transform: scale(1.05);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+            border-color: var(--primary);
+        }
+
+        .ots-ref-card span {
+            font-weight: 800;
+            color: #000;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0.5;
+            transition: var(--transition);
+        }
+
+        .ots-ref-card:hover span {
+            opacity: 1;
+            color: var(--primary);
+            letter-spacing: 5px;
+        }
+
+        .ots-ref-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+            transition: var(--transition);
+        }
+
+        .ots-ref-card:hover .ots-ref-img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .ots-banner {
+                padding: 120px 20px 60px;
+                height: 40vh;
+                /* Slights adjustment for mobile */
+            }
+
+            .ots-banner h1 {
+                font-size: 36px;
+                /* Smaller font for mobile to prevent overflow */
+            }
+
+            .ots-section {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+                overflow-x: hidden;
+            }
+
+            .ots-ref-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                width: 100%;
+                margin: 0 auto;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="ots-standardized">
+
+    <header class="ots-header">
+        <div class="ots-logo"><a href="index.html"><img src="oteks.svg" alt="OTEKS LOGO"></a></div>
+        <nav class="ots-nav">
+            <a href="hakkimizda.html">Hakkımızda</a>
+            <a href="urunlerimiz.html">Ürünlerimiz</a>
+            <a href="referanslarimiz.html" class="active">Referanslarımız</a>
+            <a href="teklif-al.html">Teklif Al</a>
+            <a href="iletisim.html">İletişim</a>
+        </nav>
+        <button class="ots-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="ots-mobile-nav">
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="urunlerimiz.html">Ürünlerimiz</a>
+        <a href="referanslarimiz.html" class="active">Referanslarımız</a>
+        <a href="teklif-al.html">Teklif Al</a>
+        <a href="iletisim.html">İletişim</a>
+    </div>
+
+    <div class="ots-banner">
+        <h1>REFERANSLARIMIZ</h1>
+    </div>
+
+    <section class="ots-section">
+        <div class="ots-ref-container">
+            <h2
+                style="font-size:14px; color:var(--primary); text-transform:uppercase; letter-spacing:4px; font-weight:800; margin-bottom:40px;">
+                SEÇKİN İŞ ORTAKLARIMIZ</h2>
+            <div class="ots-ref-grid" id="ref-grid">
+                <!-- Fallback content if JS fails or loading -->
+                <div class="ots-ref-card"><span>Yükleniyor...</span></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ots-footer">
+        <p lang="en">TWINBOSS TRADING LTD. &copy; 2026. ALL RIGHTS RESERVED.</p>
+        <p lang="en" style="margin-top: 10px; font-size: 11px; opacity: 0.4;">POWERED BY <a
+                href="https://prismacyprus.com/" target="_blank"
+                style="color: inherit; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2);">PRISMA
+                COLLECTIVE STUDIO</a>
+        </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        const initialRefs = [
+            { "id": "ref_1", "name": "Global Hotel", "img": "" },
+            { "id": "ref_2", "name": "Azure Resort", "img": "" },
+            { "id": "ref_3", "name": "Elite Cafe", "img": "" },
+            { "id": "ref_4", "name": "Grand Palace", "img": "" },
+            { "id": "ref_5", "name": "Sky Lounge", "img": "" },
+            { "id": "ref_6", "name": "Marine Club", "img": "" },
+            { "id": "ref_7", "name": "Royal Suites", "img": "" },
+            { "id": "ref_8", "name": "Vista Dine", "img": "" }
+        ];
+
+        async function loadReferences() {
+            let data = initialRefs;
+            try {
+                const response = await fetch('data/references.json');
+                if (response.ok) {
+                    const apiData = await response.json();
+                    if (apiData.length > 0) data = apiData;
+                }
+            } catch (e) {
+                console.warn('Using static refs');
+            }
+            renderReferences(data);
+        }
+
+        function renderReferences(data) {
+            const grid = document.getElementById('ref-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            data.forEach(ref => {
+                const card = document.createElement('div');
+                card.className = 'ots-ref-card';
+
+                if (ref.img && ref.img.length > 5) {
+                    card.innerHTML = `<img src="${ref.img}" alt="${ref.name}" class="ots-ref-img">`;
+                } else {
+                    card.innerHTML = `<span>${ref.name}</span>`;
+                }
+
+                grid.appendChild(card);
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', loadReferences);
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+
+</html>

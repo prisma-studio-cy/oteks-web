@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teklif Al - Oteks Premium Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <style>
+        /* Offer Page Special Layout */
+        body {
+            background: var(--bg-dark);
+        }
+
+        .ots-offer-hero {
+            height: 50vh;
+            background: url('assets/0 3 GET OFFER - CATEGORY BANNER.png') no-repeat center center/cover;
+            display: flex;
+            align-items: flex-end;
+            padding: 80px 8%;
+            position: relative;
+        }
+
+        .ots-offer-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.1));
+        }
+
+        .ots-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .ots-form-section {
+            padding: 80px 8% 120px;
+        }
+
+        .ots-container-form {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 100px;
+            padding: 0;
+        }
+
+        .ots-pitch h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            line-height: 1.1;
+        }
+
+        .ots-feature {
+            margin-bottom: 40px;
+            border-left: 2px solid var(--primary);
+            padding-left: 25px;
+        }
+
+        .ots-feature h4 {
+            font-size: 13px;
+            text-transform: uppercase;
+            color: var(--primary);
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .ots-feature p {
+            color: var(--text-light);
+            opacity: 0.6;
+        }
+
+        .ots-form-box {
+            background: #0a0a0a;
+            padding: 60px;
+            border: 1px solid var(--border);
+        }
+
+        .ots-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            margin-bottom: 50px;
+        }
+
+        .ots-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .ots-input-group label {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--primary);
+            letter-spacing: 2px;
+        }
+
+        .ots-input-group input,
+        .ots-input-group select,
+        .ots-input-group textarea {
+            width: 100%;
+            padding: 20px;
+            background: #111;
+            border: 1px solid #222;
+            color: #fff;
+            font-family: inherit;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+
+        .ots-input-group input:focus {
+            border-color: var(--primary);
+            background: #000;
+            outline: none;
+        }
+
+        .ots-btn-submit {
+            background: var(--primary);
+            color: #000;
+            border: none;
+            padding: 25px;
+            font-weight: 800;
+            font-size: 15px;
+            cursor: pointer;
+            width: 100%;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .ots-btn-submit:hover {
+            background: #fff;
+            transform: translateY(-5px);
+        }
+
+        .ots-file-action-wrapper {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ots-btn-download {
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 800;
+            border: 1px solid var(--primary);
+            padding: 15px 20px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .ots-btn-download:hover {
+            background: var(--primary);
+            color: #000;
+        }
+
+        .ots-custom-file-input {
+            display: flex;
+            align-items: center;
+            background: #111;
+            border: 1px solid #222;
+            padding: 5px;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .ots-file-label {
+            background: #222;
+            color: #fff;
+            padding: 10px 15px;
+            font-size: 11px;
+            font-weight: 800;
+            cursor: pointer;
+            border: 1px solid #333;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .ots-file-label:hover {
+            background: var(--primary);
+            color: #000;
+            border-color: var(--primary);
+        }
+
+        .ots-file-name {
+            margin-left: 15px;
+            font-size: 12px;
+            color: #888;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 150px;
+        }
+
+        @media (max-width: 1024px) {
+            .ots-container-form {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .ots-form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ots-form-section {
+                padding: 60px 20px;
+            }
+
+            .ots-form-box {
+                padding: 30px;
+            }
+
+            .ots-file-action-wrapper {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .ots-btn-download,
+            .ots-custom-file-input {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .ots-custom-file-input {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body class="ots-standardized">
+
+    <header class="ots-header">
+        <div class="ots-logo"><a href="index.html"><img src="oteks.svg" alt="OTEKS LOGO"></a></div>
+        <nav class="ots-nav">
+            <a href="hakkimizda.html">Hakkımızda</a>
+            <a href="urunlerimiz.html">Ürünlerimiz</a>
+            <a href="referanslarimiz.html">Referanslarımız</a>
+            <a href="teklif-al.html" class="active">Teklif Al</a>
+            <a href="iletisim.html">İletişim</a>
+        </nav>
+        <button class="ots-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="ots-mobile-nav">
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="urunlerimiz.html">Ürünlerimiz</a>
+        <a href="referanslarimiz.html">Referanslarımız</a>
+        <a href="teklif-al.html" class="active">Teklif Al</a>
+        <a href="iletisim.html">İletişim</a>
+    </div>
+
+    <div class="ots-offer-hero">
+        <div class="ots-hero-content">
+            <p>KURUMSAL İŞBİRLİĞİ</p>
+            <h1>TEKLİF ALIN</h1>
+        </div>
+    </div>
+
+    <section class="ots-section">
+        <div class="ots-container-form">
+            <div class="ots-pitch">
+                <h2>İşletmenizi <br><span style="color:var(--primary)">Zirveye</span> Taşıyın</h2>
+                <p style="opacity:0.6; margin-bottom:40px;">Profesyonel projeleriniz için global standartlarda ekipman
+                    tedariği sağlıyoruz.</p>
+                <div class="ots-feature">
+                    <h4>HIZLI SÜREÇ</h4>
+                    <p>24 saat içerisinde detaylı ürün teklifi.</p>
+                </div>
+                <div class="ots-feature">
+                    <h4>PROJE DESTEĞİ</h4>
+                    <p>Mutfak ve sunum konsepti için ücretsiz ürün seçimi desteği.</p>
+                </div>
+            </div>
+
+            <form class="ots-form-box" id="offerForm">
+                <div class="ots-form-grid">
+                    <div class="ots-input-group"><label>YETKİLİ ADI</label><input type="text" name="name"
+                            placeholder="Ad Soyad" required></div>
+                    <div class="ots-input-group"><label>E-POSTA</label><input type="email" name="email"
+                            placeholder="kurumsal@sirket.com" required></div>
+                    <div class="ots-input-group"><label>GSM NO</label><input type="tel" name="phone"
+                            placeholder="+90 5XX XXX XXXX">
+                    </div>
+                    <div class="ots-input-group"><label>FİRMA ADI</label><input type="text" name="company"
+                            placeholder="Şirket Adınız" required></div>
+                    <div class="ots-input-group" style="grid-column: 1/-1;"><label>PROJE DETAYLARI</label><textarea
+                            name="details" rows="5" placeholder="Taleplerinizi belirtiniz..."></textarea></div>
+
+                    <!-- File Upload Section -->
+                    <div class="ots-input-group" style="grid-column: 1/-1;">
+                        <label>TEKLİF DOSYASI (EXCEL)</label>
+                        <div class="ots-file-action-wrapper">
+                            <a href="assets/teklif-format.xls" download class="ots-btn-download">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                    <path
+                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                </svg>
+                                ÖRNEK FORMAT İNDİR
+                            </a>
+
+                            <div class="ots-custom-file-input">
+                                <input type="file" name="offerFile" id="offerFile" accept=".xlsx, .xls"
+                                    style="display: none;">
+                                <label for="offerFile" class="ots-file-label">Dosya Seçiniz</label>
+                                <span id="file-name">Dosya seçilmedi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="ots-btn-submit">TEKLİF TALEBİ GÖNDER →</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="ots-footer">
+        <p lang="en">TWINBOSS TRADING LTD. &copy; 2026. ALL RIGHTS RESERVED.</p>
+        <p lang="en" style="margin-top: 10px; font-size: 11px; opacity: 0.4;">POWERED BY <a
+                href="https://prismacyprus.com/" target="_blank"
+                style="color: inherit; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2);">PRISMA
+                COLLECTIVE STUDIO</a></p>
+    </footer>
+
+    <script src="js/main.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('offerForm');
+            if (form) {
+                // File input handler
+                const fileInput = document.getElementById('offerFile');
+                const fileNameSpan = document.getElementById('file-name');
+                if (fileInput && fileNameSpan) {
+                    fileInput.addEventListener('change', (e) => {
+                        if (e.target.files.length > 0) {
+                            fileNameSpan.textContent = e.target.files[0].name;
+                            fileNameSpan.style.color = 'var(--primary)';
+                        } else {
+                            fileNameSpan.textContent = 'Dosya seçilmedi';
+                            fileNameSpan.style.color = '#888';
+                        }
+                    });
+                }
+
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const btn = form.querySelector('.ots-btn-submit');
+                    const originalText = btn.textContent;
+                    btn.textContent = 'GÖNDERİLİYOR...';
+                    btn.disabled = true;
+
+                    const formData = new FormData(form);
+
+                    try {
+                        const response = await fetch('/api/upload-offer', {
+                            method: 'POST',
+                            body: formData
+                        });
+
+                        if (response.ok) {
+                            alert('Teklif talebiniz ve dosyanız başarıyla alındı!');
+                            form.reset();
+                        } else {
+                            alert('Bir hata oluştu. Lütfen tekrar deneyiniz.');
+                        }
+                    } catch (error) {
+                        console.error('Submission error:', error);
+                        alert('Sunucu hatası! Lütfen bağlantınızı kontrol ediniz.');
+                    } finally {
+                        btn.textContent = originalText;
+                        btn.disabled = false;
+                    }
+                });
+            }
+        });
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda - Oteks Premium Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <style>
+        /* Storytelling Special Layout */
+        body {
+            background: var(--bg-dark);
+        }
+
+        .ots-story-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 8%;
+            position: relative;
+        }
+
+        .ots-story-section.light {
+            background: var(--bg-light);
+            color: #000;
+        }
+
+        .ots-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .ots-text-box h2 {
+            font-size: 72px;
+            font-weight: 800;
+            letter-spacing: -4px;
+            margin-bottom: 40px;
+            line-height: 0.9;
+        }
+
+        .ots-text-box p {
+            font-size: 20px;
+            line-height: 1.8;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        .ots-text-box .highlight {
+            color: var(--primary);
+            border-left: 3px solid var(--primary);
+            padding-left: 20px;
+            font-weight: 600;
+        }
+
+        .ots-image-box {
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .ots-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 2.5s ease;
+            filter: brightness(0.9);
+        }
+
+        .ots-story-section:hover .ots-image-box img {
+            transform: scale(1.1);
+            filter: brightness(1);
+        }
+
+        .ots-story-section:nth-child(even) .ots-container {
+            grid-template-columns: 1.2fr 1fr;
+        }
+
+        .ots-story-section:nth-child(even) .ots-text-box {
+            order: 2;
+        }
+
+        .ots-story-section:nth-child(even) .ots-image-box {
+            order: 1;
+        }
+
+        @media (max-width: 1024px) {
+            .ots-container {
+                grid-template-columns: 1fr !important;
+                gap: 60px;
+            }
+
+            .ots-story-section {
+                padding: 60px 20px;
+            }
+
+            .ots-text-box h2 {
+                font-size: 48px;
+            }
+
+            .ots-image-box {
+                height: 50vh;
+                order: 2 !important;
+            }
+
+            .ots-text-box {
+                order: 1 !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="ots-standardized">
+
+    <header class="ots-header">
+        <div class="ots-logo"><a href="index.html"><img src="oteks.svg" alt="OTEKS LOGO"></a></div>
+        <nav class="ots-nav">
+            <a href="hakkimizda.html" class="active">Hakkımızda</a>
+            <a href="urunlerimiz.html">Ürünlerimiz</a>
+            <a href="referanslarimiz.html">Referanslarımız</a>
+            <a href="teklif-al.html">Teklif Al</a>
+            <a href="iletisim.html">İletişim</a>
+        </nav>
+        <button class="ots-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="ots-mobile-nav">
+        <a href="hakkimizda.html" class="active">Hakkımızda</a>
+        <a href="urunlerimiz.html">Ürünlerimiz</a>
+        <a href="referanslarimiz.html">Referanslarımız</a>
+        <a href="teklif-al.html">Teklif Al</a>
+        <a href="iletisim.html">İletişim</a>
+    </div>
+
+    <!-- HAKKIMIZDA SECTION -->
+    <section class="ots-story-section dark">
+        <div class="ots-container">
+            <div class="ots-text-box">
+                <p style="color:var(--primary); font-weight:800; letter-spacing:4px; margin-bottom:20px;">OTEKS</p>
+                <h2>HAKKIMIZDA</h2>
+                <p>Oteks Otel Ekipmanları, otel, cafe ve restoranlar için modern, şık ve işlevsel ekipmanlar sunan bir
+                    tedarik markasıdır. Amacımız; işletmelerin ihtiyaç duyduğu ürünleri kaliteli, hızlı ve güvenilir
+                    şekilde ulaştırmaktır.</p>
+                <div class="ots-text-box">
+                    <p class="highlight">Her detayın önemli olduğunu biliyor, estetik ve dayanıklılığı bir arada sunan
+                        çözümlerle işletmelere değer katıyoruz. Oteks, profesyonel hizmet anlayışıyla sektörün çözüm
+                        ortağıdır.</p>
+                </div>
+            </div>
+            <div class="ots-image-box"><img src="assets/0 1. ABOUT US.webp" alt="Hakkımızda" fetchpriority="high"></div>
+        </div>
+    </section>
+
+    <!-- MISYONUMUZ SECTION -->
+    <section class="ots-story-section light">
+        <div class="ots-container">
+            <div class="ots-text-box">
+                <p style="color:var(--primary); font-weight:800; letter-spacing:4px; margin-bottom:20px;">GELECEK</p>
+                <h2 style="color:#000;">MİSYONUMUZ</h2>
+                <p style="color:#333;">Otel, cafe ve restoran sektörlerinin ihtiyaç duyduğu ekipmanları; kaliteli,
+                    fonksiyonel ve estetik çözümlerle sunarak işletmelerin operasyonel verimliliğini ve misafir
+                    memnuniyetini artırmak.</p>
+                <p style="color:#333;">Müşteri odaklı hizmet anlayışımız, güvenilir tedarik sürecimiz ve zamanında
+                    teslimat prensibimizle iş ortaklarımıza sürdürülebilir değer katmak.</p>
+            </div>
+            <div class="ots-image-box"><img src="assets/0 1. ABOUT US - CATEGORY BANNER.webp" alt="Misyonumuz"></div>
+        </div>
+    </section>
+
+    <!-- VIZYONUMUZ SECTION -->
+    <section class="ots-story-section dark">
+        <div class="ots-container">
+            <div class="ots-text-box">
+                <p style="color:var(--primary); font-weight:800; letter-spacing:4px; margin-bottom:20px;">VİZYON</p>
+                <h2>VİZYONUMUZ</h2>
+                <p>Kıbrıs genelinde otel ve yeme-içme sektöründe güvenilirliği, kalite anlayışı ve çözüm odaklı
+                    yaklaşımıyla tercih edilen lider ekipman tedarikçilerinden biri olmak.</p>
+                <p>Yenilikçi ürünler ve güçlü iş ortaklıklarıyla sektörde kalıcı bir marka değeri oluşturmak.</p>
+            </div>
+            <div class="ots-image-box"><img
+                    src="assets/top-view-black-cup-saucer-white-plate-grey-plate-dark-surface-free-space.jpg.webp"
+                    alt="Vizyonumuz"></div>
+        </div>
+    </section>
+
+    <footer class="ots-footer">
+        <p lang="en">TWINBOSS TRADING LTD. &copy; 2026. ALL RIGHTS RESERVED.</p>
+        <p lang="en" style="margin-top: 10px; font-size: 11px; opacity: 0.4;">POWERED BY <a
+                href="https://prismacyprus.com/" target="_blank"
+                style="color: inherit; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2);">PRISMA
+                COLLECTIVE STUDIO</a>
+        </p>
+    </footer>
+
+    <script src="js/main.min.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+
+</html>

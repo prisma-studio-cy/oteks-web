@@ -1,0 +1,250 @@
+[
+    {
+        "id": "sofra",
+        "title": "Sofra & Sunum",
+        "subs": [
+            {
+                "title": "Porselen Ürünleri",
+                "desc": "Zarif ve dayanıklı porselen koleksiyonları.",
+                "tag": "PORSELEN",
+                "img": "assets/1. Porselen Ürünleri.webp",
+                "link": "https://drive.google.com/file/d/1MNHgFWtkffOih8fIIbsLs80jxJ9JH8yi/view?usp=drive_link"
+            },
+            {
+                "title": "Cam Ürünleri",
+                "desc": "Şık ve modern cam tasarımları.",
+                "tag": "CAM",
+                "img": "assets/2. Cam Ürünleri.webp",
+                "link": "https://drive.google.com/file/d/1sDkYpswayG12-KjkqOrii_JQE35CLZ5k/view?usp=drive_link"
+            },
+            {
+                "title": "Çatal-Kaşık-Bıçak Ürünleri",
+                "desc": "Paslanmaz çelik çatal, kaşık ve bıçak setleri.",
+                "tag": "ÇELİK",
+                "img": "assets/3. Çatal-Kaşık-Bıçak Ürünleri.webp",
+                "link": "https://drive.google.com/file/d/13EwaiVtkt6E_GainAkB7bmUXJDU1TVBH/view?usp=drive_link"
+            }
+        ]
+    },
+    {
+        "id": "sunum",
+        "title": "Sunum & Servis Ekipmanları",
+        "subs": [
+            {
+                "title": "Sunum Ürünleri",
+                "desc": "Yemek sunumlarınızı sanat eserine dönüştürün.",
+                "tag": "SUNUM",
+                "img": "assets/4. Sunum Ürünleri.webp",
+                "link": "https://drive.google.com/file/d/1adY7OGB1AyBpdkwyUzqMtmlHzMHTviB2/view?usp=drive_link"
+            },
+            {
+                "title": "Masaüstü Servis Aksesuarları",
+                "desc": "Sofralarınız için tamamlayıcı şık aksesuarlar.",
+                "tag": "AKSESUAR",
+                "img": "assets/5. Masaüstü Servis Aksesuarları.webp",
+                "link": "https://drive.google.com/file/d/1EpZPGnzEcm0524DfNI1fg0sgpdXYGS68/view?usp=drive_link"
+            }
+        ]
+    },
+    {
+        "id": "bar",
+        "title": "Bar & İçecek Ekipmanları",
+        "subs": [
+            {
+                "title": "Bar Ekipmanları",
+                "desc": "Profesyonel bar kurulumu ve servisi için her şey.",
+                "tag": "BAR",
+                "img": "assets/6. Bar Ekipmanları.webp",
+                "link": "https://drive.google.com/file/d/17R_pU58VV2-yT43_XAmcQHR364tDO27k/view?usp=drive_link"
+            },
+            {
+                "title": "İçecek Hazırlama",
+                "desc": "Kahve, kokteyl ve içecek hazırlama ekipmanları.",
+                "tag": "İÇECEK",
+                "img": "assets/7. İçecek Hazırlama.webp",
+                "link": "https://drive.google.com/file/d/18SkUfbtkihoMjlYfZa0-jdv-lqhy3JAS/view?usp=drive_link"
+            }
+        ]
+    },
+    {
+        "id": "mutfak_hazirlik",
+        "title": "Mutfak Hazırlık Ekipmanları",
+        "subs": [
+            {
+                "title": "Hazırlık Aletleri",
+                "desc": "Mutfak operasyonlarını hızlandıran pratik aletler.",
+                "tag": "PRATİK",
+                "img": "assets/8. Hazırlık Ekipmanları.webp",
+                "link": "https://drive.google.com/file/d/1x_xdMlFHhQpAcA98xQFbZQ5A3PqnGVV_/view?usp=drive_link"
+            },
+            {
+                "title": "Yardımcı Aletler",
+                "desc": "Şeflerin vazgeçilmez yardımcı ekipmanları.",
+                "tag": "YARDIMCI",
+                "img": "assets/9. Yardımcı Aletler.webp",
+                "link": "https://drive.google.com/file/d/1kf5lEgUygfkaTPTC3hHNdGe3zx4VLfe3/view?usp=drive_link"
+            },
+            {
+                "title": "Endüstriyel Hazırlık Cihazları",
+                "desc": "Yüksek kapasiteli profesyonel hazırlık makineleri.",
+                "tag": "ENDÜSTRİYEL",
+                "img": "assets/10. Endüstriyel Hazırlık Cihazları.webp",
+                "link": "https://drive.google.com/file/d/1TpVDf_oj8rz2G5kIbTIwdD252yh2OPYH/view?usp=drive_link"
+            }
+        ]
+    },
+    {
+        "id": "pisirme",
+        "title": "Pişirme Ekipmanları",
+        "subs": [
+            {
+                "title": "Pişirme Ürünleri",
+                "desc": "Tencere, tava ve pişirme gereçleri.",
+                "tag": "PİŞİRME",
+                "img": "assets/11. Pişirme Ürünleri.webp",
+                "link": "https://drive.google.com/file/d/1HY7AvlNbkJg8Yloi6XgaxXjs7KdvOefk/view?usp=drive_link"
+            },
+            {
+                "title": "Endüstriyel Pişirme Cihazları",
+                "desc": "Fırınlar, ocaklar ve endüstriyel pişiriciler.",
+                "tag": "CİHAZLAR",
+                "img": "assets/12. Endüstriyel Pişirme Cihazları.webp",
+                "link": "https://drive.google.com/file/d/1e42F9MOs5MMj2PM1KmWs3EOMhUwvjGxT/view?usp=drive_link"
+            }
+        ]
+    },
+    {
+        "id": "pastacilik",
+        "title": "Pastacılık & Fırıncılık",
+        "subs": [
+            {
+                "title": "Pastacılık Ekipmanları",
+                "desc": "Pasta ve hamur işi hazırlığı için profesyonel ürünler.",
+                "tag": "PASTA",
+                "img": "assets/13. Pastacılık Ekipmanları.webp",
+                "link": ""
+            },
+            {
+                "title": "Yardımcı Pastacılık Ürünleri",
+                "desc": "Dekorasyon ve sunum için pastacılık gereçleri.",
+                "tag": "DEKOR",
+                "img": "assets/14. Yardımcı Pastacılık Ürünleri.webp",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "id": "acik_bufe",
+        "title": "Açık Büfe & Teşhir Sistemleri",
+        "subs": [
+            {
+                "title": "Teşhir Ürünleri",
+                "desc": "Ürünlerinizi en iyi şekilde sergileyen vitrinler.",
+                "tag": "VİTRİN",
+                "img": "assets/15. Teşhir Ürünleri.webp",
+                "link": "https://drive.google.com/file/d/1yW3qd3VZ5kJwj3SsQ2PG8_rtpPZljsFx/view?usp=drive_link"
+            },
+            {
+                "title": "Büfe Servis & Aksesuarları",
+                "desc": "Açık büfe düzeni için şık servis elemanları.",
+                "tag": "BÜFE",
+                "img": "assets/16. Büfe Servis & Aksesuarları.webp",
+                "link": "https://drive.google.com/file/d/1VCStsJuOhhGMWLIZgri7zC4Ht0Iag4Te/view?usp=drive_link"
+            },
+            {
+                "title": "Genel Amaçlı Yiyecek Arabaları",
+                "desc": "Servis ve taşıma kolaylığı sağlayan arabalar.",
+                "tag": "SERVİS",
+                "img": "assets/17. Genel Amaçlı Yiyecek Arabaları.webp",
+                "link": "https://drive.google.com/file/d/1WU20RUdtNTSvrz3Kct62g9ghEPM4ryis/view?usp=drive_link"
+            }
+        ]
+    },
+    {
+        "id": "housekeeping",
+        "title": "HOUSEKEEPING & Operasyonel",
+        "subs": [
+            {
+                "title": "HOUSEKEEPING EKİPMANLARI",
+                "desc": "Kat hizmetleri ve oda temizliği için profesyonel çözümler.",
+                "tag": "TEMİZLİK",
+                "img": "assets/18. Housekeeping & Operasyonel.webp",
+                "link": "https://drive.google.com/file/d/1iTuZWlMJoNGVAVqinf8QDEOcXftKLpST/view?usp=drive_link"
+            },
+            {
+                "title": "Operasyonel Ekipmanlar",
+                "desc": "Otel operasyonlarını destekleyen teknik ekipmanlar.",
+                "tag": "OPERASYON",
+                "img": "assets/19. Operasyonel Ekipmanlar.webp",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "id": "tekstil",
+        "title": "Tekstil Ürünleri",
+        "subs": [
+            {
+                "title": "Yatak Tekstili",
+                "desc": "Konforlu uyku deneyimi için kaliteli tekstil ürünleri.",
+                "tag": "UYKU",
+                "img": "assets/20. Yatak Tekstili.webp",
+                "link": "https://drive.google.com/file/d/1df6dqrMRQg7O6oQadHxk2auvxYnDLCY4/view?usp=drive_link"
+            },
+            {
+                "title": "Banyo Tekstili",
+                "desc": "Yumuşak ve emici banyo havluları ve bornozlar.",
+                "tag": "BANYO",
+                "img": "assets/21. Banyo Tekstili.webp",
+                "link": "https://drive.google.com/file/d/1KEtaKSGKuiZkZmpuI8si38ag_c1S4zoV/view?usp=drive_link"
+            },
+            {
+                "title": "Restaurant Tekstili",
+                "desc": "Masa örtüleri ve peçetelerle şık sofralar.",
+                "tag": "RESTORAN",
+                "img": "assets/22. Restaurant Tekstili.webp",
+                "link": "https://drive.google.com/file/d/1NUVNn71ip-B345nQJ445k7ibxHdqWRfu/view?usp=drive_link"
+            }
+        ]
+    },
+    {
+        "id": "koku",
+        "title": "Ambiyans Koku Sistemleri",
+        "subs": [
+            {
+                "title": "Geniş Alan Ambiyans Koku Sistemleri",
+                "desc": "Büyük mekanlar için profesyonel kokulandırma.",
+                "tag": "GENİŞ ALAN",
+                "img": "assets/23. Geniş Alan Ambiyans Koku Sistemleri.webp",
+                "link": "https://drive.google.com/file/d/1Lf3CmP8OLIf8XER2YB9UakeJFkXYCuZL/view?usp=drive_link"
+            },
+            {
+                "title": "Dekoratif Ambiyans Koku Sistemleri",
+                "desc": "Dekoratif ve hoş kokulu ortam çözümleri.",
+                "tag": "DEKORATİF",
+                "img": "assets/24. Dekoratif Ambiyans Koku Sistemleri.webp",
+                "link": "https://drive.google.com/file/d/15h0N3mdr7To2d8YPh34SEQovsK59zNZE/view?usp=drive_link"
+            }
+        ]
+    },
+    {
+        "id": "reklam",
+        "title": "Reklam & Promosyon",
+        "subs": [
+            {
+                "title": "Promosyon Ürünleri",
+                "desc": "Markanızı öne çıkaran özel promosyon ürünleri.",
+                "tag": "MARKA",
+                "img": "assets/25. Promosyon Ürünleri.webp",
+                "link": "https://drive.google.com/file/d/1Xd_5PXKwWT-ZkuWw7yTSfiLM1cuXIrzh/view?usp=drive_link"
+            },
+            {
+                "title": "Reklam-Yönlendirme",
+                "desc": "Yönlendirme tabelaları ve reklam panoları.",
+                "tag": "TABELA",
+                "img": "assets/26. Reklam & Yönlendirme.webp",
+                "link": "https://drive.google.com/file/d/1bElxgHWs5_edjo6Q65tZHWuD7aY-W5dJ/view?usp=drive_link"
+            }
+        ]
+    }
+]
