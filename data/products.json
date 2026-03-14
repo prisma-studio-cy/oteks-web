@@ -55,7 +55,7 @@
                 "desc": "Profesyonel bar kurulumu ve servisi için her şey.",
                 "tag": "BAR",
                 "img": "assets/product-06-bar.webp",
-                "link": ""
+                "link": "https://menu.oteks.net/pdfs/CompressedBar%20Aksesuarlar%C4%B1.pdf"
             },
             {
                 "title": "İçecek Hazırlama",
@@ -189,7 +189,7 @@
                 "desc": "Konforlu uyku deneyimi için kaliteli tekstil ürünleri.",
                 "tag": "UYKU",
                 "img": "assets/product-20-yatak-tekstili.webp",
-                "link": ""
+                "link": "https://menu.oteks.net/pdfs/CompressedYatak%20Tekstil%20%C3%9Cr%C3%BCnleri.pdf"
             },
             {
                 "title": "Banyo Tekstili",
@@ -216,14 +216,14 @@
                 "desc": "Büyük mekanlar için profesyonel kokulandırma.",
                 "tag": "GENİŞ ALAN",
                 "img": "assets/product-23-koku-genis.webp",
-                "link": ""
+                "link": "https://menu.oteks.net/pdfs/CompressedGeni%C5%9F%20Alan%20Koku%20Makineleri.pdf"
             },
             {
                 "title": "Dekoratif Ambiyans Koku Sistemleri",
                 "desc": "Dekoratif ve hoş kokulu ortam çözümleri.",
                 "tag": "DEKORATİF",
                 "img": "assets/product-24-koku-dekoratif.webp",
-                "link": ""
+                "link": "https://menu.oteks.net/pdfs/CompressedDekoratif%20Koku%20Makineleri.pdf"
             }
         ]
     },
@@ -243,7 +243,7 @@
                 "desc": "Yönlendirme tabelaları ve reklam panoları.",
                 "tag": "TABELA",
                 "img": "assets/product-26-reklam.webp",
-                "link": ""
+                "link": "https://menu.oteks.net/pdfs/CompressedReklam-Y%C3%B6nlendirme.pdf"
             }
         ]
     }

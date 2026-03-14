@@ -12,7 +12,7 @@ const XLSX_MAGIC = Buffer.from([0x50, 0x4B, 0x03, 0x04]);
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 const MAX_FIELD_LENGTH = 500;
 const ALLOWED_EXTENSIONS = ['.xls', '.xlsx'];
-const ALLOWED_ORIGINS = ['https://oteks.net', 'https://www.oteks.net', 'http://localhost:3000'];
+const ALLOWED_ORIGINS = ['https://oteks.net', 'https://www.oteks.net', 'https://oteks-web.vercel.app', 'http://localhost:3000'];
 
 function sanitize(str) {
     if (typeof str !== 'string') return '';
