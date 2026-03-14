@@ -1,4 +1,4 @@
-const formidable = require('formidable');
+const { formidable } = require('formidable');
 const nodemailer = require('nodemailer');
 const fs = require('fs');
 const path = require('path');
