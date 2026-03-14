@@ -165,13 +165,21 @@ module.exports = async function handler(req, res) {
         return res.status(200).json({ success: true, message: 'Teklif talebiniz alındı!' });
 
     } catch (error) {
-        console.error('Upload-offer error:', error.message);
+        console.error('Upload-offer error:', error.message, error.code);
 
         if (error.code === 'LIMIT_FILE_SIZE' || error.message?.includes('maxFileSize')) {
             return res.status(400).json({ error: 'File too large (max 5MB)' });
         }
 
-        return res.status(500).json({ error: 'Server error. Please try again.' });
+        if (error.code === 'EAUTH' || error.message?.includes('auth') || error.message?.includes('credentials')) {
+            return res.status(500).json({ error: 'Email authentication failed. Check EMAIL_USER and EMAIL_PASS.' });
+        }
+
+        if (error.responseCode === 535 || error.message?.includes('535')) {
+            return res.status(500).json({ error: 'Gmail rejected the credentials. Ensure EMAIL_PASS is a valid App Password.' });
+        }
+
+        return res.status(500).json({ error: 'Server error: ' + (error.message || 'Unknown error') });
 
     } finally {
         if (tempFilePath) {

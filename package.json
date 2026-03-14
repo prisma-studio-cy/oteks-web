@@ -1,9 +1,7 @@
 {
   "name": "oteks",
   "version": "1.0.0",
-  "scripts": {
-    "start": "node server.js"
-  },
+  "scripts": {},
   "dependencies": {
     "formidable": "^3.5.2",
     "nodemailer": "^8.0.2"
