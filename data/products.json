@@ -7,22 +7,22 @@
                 "title": "Porselen Ürünleri",
                 "desc": "Zarif ve dayanıklı porselen koleksiyonları.",
                 "tag": "PORSELEN",
-                "img": "assets/1. Porselen Ürünleri.webp",
-                "link": "https://drive.google.com/file/d/1MNHgFWtkffOih8fIIbsLs80jxJ9JH8yi/view?usp=drive_link"
+                "img": "assets/product-01-porselen.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedPorselen%20%C3%9Cr%C3%BCnleri.pdf"
             },
             {
                 "title": "Cam Ürünleri",
                 "desc": "Şık ve modern cam tasarımları.",
                 "tag": "CAM",
-                "img": "assets/2. Cam Ürünleri.webp",
-                "link": "https://drive.google.com/file/d/1sDkYpswayG12-KjkqOrii_JQE35CLZ5k/view?usp=drive_link"
+                "img": "assets/product-02-cam.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedCam%20%C3%9Cr%C3%BCnleri.pdf"
             },
             {
                 "title": "Çatal-Kaşık-Bıçak Ürünleri",
                 "desc": "Paslanmaz çelik çatal, kaşık ve bıçak setleri.",
                 "tag": "ÇELİK",
-                "img": "assets/3. Çatal-Kaşık-Bıçak Ürünleri.webp",
-                "link": "https://drive.google.com/file/d/13EwaiVtkt6E_GainAkB7bmUXJDU1TVBH/view?usp=drive_link"
+                "img": "assets/product-03-catal.webp",
+                "link": "https://menu.oteks.net/pdfs/Compressed%C3%87atal%20Ka%C5%9F%C4%B1k%20B%C4%B1%C3%A7ak%20%C3%9Cr%C3%BCnleri.pdf"
             }
         ]
     },
@@ -34,15 +34,15 @@
                 "title": "Sunum Ürünleri",
                 "desc": "Yemek sunumlarınızı sanat eserine dönüştürün.",
                 "tag": "SUNUM",
-                "img": "assets/4. Sunum Ürünleri.webp",
-                "link": "https://drive.google.com/file/d/1adY7OGB1AyBpdkwyUzqMtmlHzMHTviB2/view?usp=drive_link"
+                "img": "assets/product-04-sunum.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedSunum%20%C3%9Cr%C3%BCnleri.pdf"
             },
             {
                 "title": "Masaüstü Servis Aksesuarları",
                 "desc": "Sofralarınız için tamamlayıcı şık aksesuarlar.",
                 "tag": "AKSESUAR",
-                "img": "assets/5. Masaüstü Servis Aksesuarları.webp",
-                "link": "https://drive.google.com/file/d/1EpZPGnzEcm0524DfNI1fg0sgpdXYGS68/view?usp=drive_link"
+                "img": "assets/product-05-masaustu.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedMasa%C3%BCst%C3%BC%20Servis%20Aksesuarlar%C4%B1.pdf"
             }
         ]
     },
@@ -54,15 +54,15 @@
                 "title": "Bar Ekipmanları",
                 "desc": "Profesyonel bar kurulumu ve servisi için her şey.",
                 "tag": "BAR",
-                "img": "assets/6. Bar Ekipmanları.webp",
-                "link": "https://drive.google.com/file/d/17R_pU58VV2-yT43_XAmcQHR364tDO27k/view?usp=drive_link"
+                "img": "assets/product-06-bar.webp",
+                "link": ""
             },
             {
                 "title": "İçecek Hazırlama",
                 "desc": "Kahve, kokteyl ve içecek hazırlama ekipmanları.",
                 "tag": "İÇECEK",
-                "img": "assets/7. İçecek Hazırlama.webp",
-                "link": "https://drive.google.com/file/d/18SkUfbtkihoMjlYfZa0-jdv-lqhy3JAS/view?usp=drive_link"
+                "img": "assets/product-07-icecek.webp",
+                "link": "https://menu.oteks.net/pdfs/Compressed%C4%B0%C3%A7ecek%20Haz%C4%B1rlama.pdf"
             }
         ]
     },
@@ -74,22 +74,22 @@
                 "title": "Hazırlık Aletleri",
                 "desc": "Mutfak operasyonlarını hızlandıran pratik aletler.",
                 "tag": "PRATİK",
-                "img": "assets/8. Hazırlık Ekipmanları.webp",
-                "link": "https://drive.google.com/file/d/1x_xdMlFHhQpAcA98xQFbZQ5A3PqnGVV_/view?usp=drive_link"
+                "img": "assets/product-08-hazirlik.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedHaz%C4%B1rl%C4%B1k%20Aletleri.pdf"
             },
             {
                 "title": "Yardımcı Aletler",
                 "desc": "Şeflerin vazgeçilmez yardımcı ekipmanları.",
                 "tag": "YARDIMCI",
-                "img": "assets/9. Yardımcı Aletler.webp",
-                "link": "https://drive.google.com/file/d/1kf5lEgUygfkaTPTC3hHNdGe3zx4VLfe3/view?usp=drive_link"
+                "img": "assets/product-09-yardimci.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedYard%C4%B1mc%C4%B1%20Aletler.pdf"
             },
             {
                 "title": "Endüstriyel Hazırlık Cihazları",
                 "desc": "Yüksek kapasiteli profesyonel hazırlık makineleri.",
                 "tag": "ENDÜSTRİYEL",
-                "img": "assets/10. Endüstriyel Hazırlık Cihazları.webp",
-                "link": "https://drive.google.com/file/d/1TpVDf_oj8rz2G5kIbTIwdD252yh2OPYH/view?usp=drive_link"
+                "img": "assets/product-10-endustriyel-hazirlik.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedEnd%C3%BCstriyel%20Haz%C4%B1rl%C4%B1k%20Cihazlar%C4%B1.pdf"
             }
         ]
     },
@@ -101,15 +101,15 @@
                 "title": "Pişirme Ürünleri",
                 "desc": "Tencere, tava ve pişirme gereçleri.",
                 "tag": "PİŞİRME",
-                "img": "assets/11. Pişirme Ürünleri.webp",
-                "link": "https://drive.google.com/file/d/1HY7AvlNbkJg8Yloi6XgaxXjs7KdvOefk/view?usp=drive_link"
+                "img": "assets/product-11-pisirme.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedPi%C5%9Firme%20%C3%9Cr%C3%BCnleri.pdf"
             },
             {
                 "title": "Endüstriyel Pişirme Cihazları",
                 "desc": "Fırınlar, ocaklar ve endüstriyel pişiriciler.",
                 "tag": "CİHAZLAR",
-                "img": "assets/12. Endüstriyel Pişirme Cihazları.webp",
-                "link": "https://drive.google.com/file/d/1e42F9MOs5MMj2PM1KmWs3EOMhUwvjGxT/view?usp=drive_link"
+                "img": "assets/product-12-endustriyel-pisirme.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedEnd%C3%BCstriyel%20Pi%C5%9Firme%20Cihazlar%C4%B1.pdf"
             }
         ]
     },
@@ -121,14 +121,14 @@
                 "title": "Pastacılık Ekipmanları",
                 "desc": "Pasta ve hamur işi hazırlığı için profesyonel ürünler.",
                 "tag": "PASTA",
-                "img": "assets/13. Pastacılık Ekipmanları.webp",
+                "img": "assets/product-13-pastacilik.webp",
                 "link": ""
             },
             {
                 "title": "Yardımcı Pastacılık Ürünleri",
                 "desc": "Dekorasyon ve sunum için pastacılık gereçleri.",
                 "tag": "DEKOR",
-                "img": "assets/14. Yardımcı Pastacılık Ürünleri.webp",
+                "img": "assets/product-14-yardimci-pastacilik.webp",
                 "link": ""
             }
         ]
@@ -141,22 +141,22 @@
                 "title": "Teşhir Ürünleri",
                 "desc": "Ürünlerinizi en iyi şekilde sergileyen vitrinler.",
                 "tag": "VİTRİN",
-                "img": "assets/15. Teşhir Ürünleri.webp",
-                "link": "https://drive.google.com/file/d/1yW3qd3VZ5kJwj3SsQ2PG8_rtpPZljsFx/view?usp=drive_link"
+                "img": "assets/product-15-teshir.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedTe%C5%9Fhir%20%C3%9Cr%C3%BCnleri.pdf"
             },
             {
                 "title": "Büfe Servis & Aksesuarları",
                 "desc": "Açık büfe düzeni için şık servis elemanları.",
                 "tag": "BÜFE",
-                "img": "assets/16. Büfe Servis & Aksesuarları.webp",
-                "link": "https://drive.google.com/file/d/1VCStsJuOhhGMWLIZgri7zC4Ht0Iag4Te/view?usp=drive_link"
+                "img": "assets/product-16-bufe-servis.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedB%C3%BCfe%20Servis%20%26%20Aksesuarlar%C4%B1.pdf"
             },
             {
                 "title": "Genel Amaçlı Yiyecek Arabaları",
                 "desc": "Servis ve taşıma kolaylığı sağlayan arabalar.",
                 "tag": "SERVİS",
-                "img": "assets/17. Genel Amaçlı Yiyecek Arabaları.webp",
-                "link": "https://drive.google.com/file/d/1WU20RUdtNTSvrz3Kct62g9ghEPM4ryis/view?usp=drive_link"
+                "img": "assets/product-17-yiyecek-arabalari.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedGenel%20Ama%C3%A7l%C4%B1%20Yiyecek%20Arabalar%C4%B1.pdf"
             }
         ]
     },
@@ -168,14 +168,14 @@
                 "title": "HOUSEKEEPING EKİPMANLARI",
                 "desc": "Kat hizmetleri ve oda temizliği için profesyonel çözümler.",
                 "tag": "TEMİZLİK",
-                "img": "assets/18. Housekeeping & Operasyonel.webp",
-                "link": "https://drive.google.com/file/d/1iTuZWlMJoNGVAVqinf8QDEOcXftKLpST/view?usp=drive_link"
+                "img": "assets/product-18-housekeeping.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedHousekeeping%20Ekipmanlar%C4%B1.pdf"
             },
             {
                 "title": "Operasyonel Ekipmanlar",
                 "desc": "Otel operasyonlarını destekleyen teknik ekipmanlar.",
                 "tag": "OPERASYON",
-                "img": "assets/19. Operasyonel Ekipmanlar.webp",
+                "img": "assets/product-19-operasyonel.webp",
                 "link": ""
             }
         ]
@@ -188,22 +188,22 @@
                 "title": "Yatak Tekstili",
                 "desc": "Konforlu uyku deneyimi için kaliteli tekstil ürünleri.",
                 "tag": "UYKU",
-                "img": "assets/20. Yatak Tekstili.webp",
-                "link": "https://drive.google.com/file/d/1df6dqrMRQg7O6oQadHxk2auvxYnDLCY4/view?usp=drive_link"
+                "img": "assets/product-20-yatak-tekstili.webp",
+                "link": ""
             },
             {
                 "title": "Banyo Tekstili",
                 "desc": "Yumuşak ve emici banyo havluları ve bornozlar.",
                 "tag": "BANYO",
-                "img": "assets/21. Banyo Tekstili.webp",
-                "link": "https://drive.google.com/file/d/1KEtaKSGKuiZkZmpuI8si38ag_c1S4zoV/view?usp=drive_link"
+                "img": "assets/product-21-banyo-tekstili.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedBanyo%20Tekstili.pdf"
             },
             {
                 "title": "Restaurant Tekstili",
                 "desc": "Masa örtüleri ve peçetelerle şık sofralar.",
                 "tag": "RESTORAN",
-                "img": "assets/22. Restaurant Tekstili.webp",
-                "link": "https://drive.google.com/file/d/1NUVNn71ip-B345nQJ445k7ibxHdqWRfu/view?usp=drive_link"
+                "img": "assets/product-22-restaurant-tekstili.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedRestaurant%20Tekstili.pdf"
             }
         ]
     },
@@ -215,15 +215,15 @@
                 "title": "Geniş Alan Ambiyans Koku Sistemleri",
                 "desc": "Büyük mekanlar için profesyonel kokulandırma.",
                 "tag": "GENİŞ ALAN",
-                "img": "assets/23. Geniş Alan Ambiyans Koku Sistemleri.webp",
-                "link": "https://drive.google.com/file/d/1Lf3CmP8OLIf8XER2YB9UakeJFkXYCuZL/view?usp=drive_link"
+                "img": "assets/product-23-koku-genis.webp",
+                "link": ""
             },
             {
                 "title": "Dekoratif Ambiyans Koku Sistemleri",
                 "desc": "Dekoratif ve hoş kokulu ortam çözümleri.",
                 "tag": "DEKORATİF",
-                "img": "assets/24. Dekoratif Ambiyans Koku Sistemleri.webp",
-                "link": "https://drive.google.com/file/d/15h0N3mdr7To2d8YPh34SEQovsK59zNZE/view?usp=drive_link"
+                "img": "assets/product-24-koku-dekoratif.webp",
+                "link": ""
             }
         ]
     },
@@ -235,15 +235,15 @@
                 "title": "Promosyon Ürünleri",
                 "desc": "Markanızı öne çıkaran özel promosyon ürünleri.",
                 "tag": "MARKA",
-                "img": "assets/25. Promosyon Ürünleri.webp",
-                "link": "https://drive.google.com/file/d/1Xd_5PXKwWT-ZkuWw7yTSfiLM1cuXIrzh/view?usp=drive_link"
+                "img": "assets/product-25-promosyon.webp",
+                "link": "https://menu.oteks.net/pdfs/CompressedPromosyon%20%C3%9Cr%C3%BCnleri.pdf"
             },
             {
                 "title": "Reklam-Yönlendirme",
                 "desc": "Yönlendirme tabelaları ve reklam panoları.",
                 "tag": "TABELA",
-                "img": "assets/26. Reklam & Yönlendirme.webp",
-                "link": "https://drive.google.com/file/d/1bElxgHWs5_edjo6Q65tZHWuD7aY-W5dJ/view?usp=drive_link"
+                "img": "assets/product-26-reklam.webp",
+                "link": ""
             }
         ]
     }

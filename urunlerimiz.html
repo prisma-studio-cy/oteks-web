@@ -131,7 +131,7 @@
             transition: var(--transition);
             border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
-            /* Stable cards as requested - no transform on wrapper */
+            height: 100%;
         }
 
         .ots-product-card:hover {
@@ -170,6 +170,9 @@
         .ots-card-info {
             padding: 20px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
 
         .ots-card-info h3 {
@@ -187,6 +190,7 @@
             line-height: 1.5;
             margin-bottom: 15px;
             max-width: 100%;
+            flex: 1;
         }
 
         .ots-card-meta {
@@ -244,7 +248,7 @@
 
         /* Custom Hero for Products */
         .ots-page-hero {
-            background: url('assets/0 4 OUR PRODUCTS - CATEGORY BANNER.png') no-repeat center center/cover;
+            background: url('assets/banner-products.png') no-repeat center center/cover;
             position: relative;
         }
 
@@ -613,17 +617,19 @@
 
                 let grid = '<div class="ots-sub-grid">';
                 cat.subs.forEach(sub => {
+                    const imgSrc = encodeURI(sub.img || '');
+                    const linkHref = sub.link || '';
                     grid += `
                         <div class="ots-product-card">
                             <div class="ots-card-img-wrapper">
-                                <img src="${esc(sub.img)}" alt="${esc(sub.title)}" loading="lazy">
+                                <img src="${imgSrc}" alt="${esc(sub.title)}" loading="lazy">
                             </div>
 
                             <div class="ots-card-info">
                                 <h3>${esc(sub.title)}</h3>
                                 <p>${esc(sub.desc)}</p>
                                 <div class="ots-card-meta">
-                                    <a href="${esc(sub.link || '#')}" download target="_blank" class="ots-btn-catalog" ${!sub.link ? 'onclick="alert(\'Katalog yakında eklenecek!\'); return false;"' : ''}>
+                                    <a href="${linkHref || '#'}" target="_blank" class="ots-btn-catalog" ${!linkHref ? 'onclick="alert(\'Katalog yakında eklenecek!\'); return false;"' : ''}>
                                         KATALOG
                                     </a>
                                 </div>
