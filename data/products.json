@@ -122,14 +122,14 @@
                 "desc": "Pasta ve hamur işi hazırlığı için profesyonel ürünler.",
                 "tag": "PASTA",
                 "img": "assets/product-13-pastacilik.webp",
-                "link": ""
+                "link": "https://menu.oteks.net/pdfs/CompressedPastac%C4%B1l%C4%B1k%20Ekipmanlar%C4%B1.pdf"
             },
             {
                 "title": "Yardımcı Pastacılık Ürünleri",
                 "desc": "Dekorasyon ve sunum için pastacılık gereçleri.",
                 "tag": "DEKOR",
                 "img": "assets/product-14-yardimci-pastacilik.webp",
-                "link": ""
+                "link": "https://menu.oteks.net/pdfs/CompressedYard%C4%B1mc%C4%B1%20Pastac%C4%B1l%C4%B1k%20%C3%9Cr%C3%BCnleri.pdf"
             }
         ]
     },
@@ -176,7 +176,7 @@
                 "desc": "Otel operasyonlarını destekleyen teknik ekipmanlar.",
                 "tag": "OPERASYON",
                 "img": "assets/product-19-operasyonel.webp",
-                "link": ""
+                "link": "https://menu.oteks.net/pdfs/CompressedOperasyonel%20Ekipmanlar.pdf"
             }
         ]
     },
