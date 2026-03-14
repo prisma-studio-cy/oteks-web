@@ -586,6 +586,12 @@
             }
         }
 
+        function esc(str) {
+            const d = document.createElement('div');
+            d.textContent = str || '';
+            return d.innerHTML;
+        }
+
         function drawCatalog(catalogData) {
             const tabs = document.getElementById('cat-tabs');
             const mount = document.getElementById('catalog-mount');
@@ -602,7 +608,7 @@
                 tabs.appendChild(btn);
 
                 const section = document.createElement('section');
-                section.id = `cat-${cat.id}`;
+                section.id = `cat-${esc(cat.id)}`;
                 section.className = `ots-category-section ${i === 0 ? 'active' : ''}`;
 
                 let grid = '<div class="ots-sub-grid">';
@@ -610,14 +616,14 @@
                     grid += `
                         <div class="ots-product-card">
                             <div class="ots-card-img-wrapper">
-                                <img src="${sub.img}" alt="${sub.title}">
+                                <img src="${esc(sub.img)}" alt="${esc(sub.title)}" loading="lazy">
                             </div>
 
                             <div class="ots-card-info">
-                                <h3>${sub.title}</h3>
-                                <p>${sub.desc}</p>
+                                <h3>${esc(sub.title)}</h3>
+                                <p>${esc(sub.desc)}</p>
                                 <div class="ots-card-meta">
-                                    <a href="${sub.link || '#'}" download target="_blank" class="ots-btn-catalog" ${!sub.link ? 'onclick="alert(\'Katalog yakında eklenecek!\'); return false;"' : ''}>
+                                    <a href="${esc(sub.link || '#')}" download target="_blank" class="ots-btn-catalog" ${!sub.link ? 'onclick="alert(\'Katalog yakında eklenecek!\'); return false;"' : ''}>
                                         KATALOG
                                     </a>
                                 </div>

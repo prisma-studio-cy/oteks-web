@@ -1,4 +1,6 @@
 node_modules
 .DS_Store
+._*
 package-lock.json
-oteks_deploy.zip
+.vercel
+uploads/

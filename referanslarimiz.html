@@ -202,6 +202,12 @@
             renderReferences(data);
         }
 
+        function esc(str) {
+            const d = document.createElement('div');
+            d.textContent = str || '';
+            return d.innerHTML;
+        }
+
         function renderReferences(data) {
             const grid = document.getElementById('ref-grid');
             if (!grid) return;
@@ -212,9 +218,16 @@
                 card.className = 'ots-ref-card';
 
                 if (ref.img && ref.img.length > 5) {
-                    card.innerHTML = `<img src="${ref.img}" alt="${ref.name}" class="ots-ref-img">`;
+                    const img = document.createElement('img');
+                    img.src = ref.img;
+                    img.alt = esc(ref.name);
+                    img.className = 'ots-ref-img';
+                    img.loading = 'lazy';
+                    card.appendChild(img);
                 } else {
-                    card.innerHTML = `<span>${ref.name}</span>`;
+                    const span = document.createElement('span');
+                    span.textContent = ref.name;
+                    card.appendChild(span);
                 }
 
                 grid.appendChild(card);
