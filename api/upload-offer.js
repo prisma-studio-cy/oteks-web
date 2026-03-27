@@ -150,21 +150,64 @@ module.exports = async function handler(req, res) {
             socketTimeout: 10000
         });
 
-        await transporter.sendMail({
-            from: `"Oteks Web" <${process.env.EMAIL_USER}>`,
-            to: process.env.EMAIL_TO || process.env.EMAIL_USER,
+        const recipients = (process.env.EMAIL_TO || process.env.EMAIL_USER)
+            .split(',')
+            .map(e => e.trim())
+            .filter(Boolean);
+
+        const textBody = [
+            `Ad Soyad: ${name}`,
+            `E-Posta: ${email}`,
+            `Telefon: ${phone || 'Belirtilmedi'}`,
+            `Firma: ${company || 'Belirtilmedi'}`,
+            ``,
+            `Detaylar:`,
+            details || 'Belirtilmedi'
+        ].join('\n');
+
+        const htmlBody = `
+            <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:20px;">
+                <div style="background:#000;padding:20px;text-align:center;">
+                    <h2 style="color:#c9a050;margin:0;">OTEKS - Teklif Talebi</h2>
+                </div>
+                <div style="padding:20px;background:#f9f9f9;border:1px solid #eee;">
+                    <table style="width:100%;border-collapse:collapse;">
+                        <tr><td style="padding:8px 12px;font-weight:bold;color:#333;">Ad Soyad:</td><td style="padding:8px 12px;color:#555;">${name}</td></tr>
+                        <tr style="background:#fff;"><td style="padding:8px 12px;font-weight:bold;color:#333;">E-Posta:</td><td style="padding:8px 12px;color:#555;"><a href="mailto:${email}">${email}</a></td></tr>
+                        <tr><td style="padding:8px 12px;font-weight:bold;color:#333;">Telefon:</td><td style="padding:8px 12px;color:#555;">${phone || 'Belirtilmedi'}</td></tr>
+                        <tr style="background:#fff;"><td style="padding:8px 12px;font-weight:bold;color:#333;">Firma:</td><td style="padding:8px 12px;color:#555;">${company || 'Belirtilmedi'}</td></tr>
+                    </table>
+                    <div style="margin-top:16px;padding:12px;background:#fff;border:1px solid #eee;">
+                        <p style="font-weight:bold;color:#333;margin:0 0 8px;">Detaylar:</p>
+                        <p style="color:#555;margin:0;white-space:pre-wrap;">${details || 'Belirtilmedi'}</p>
+                    </div>
+                </div>
+                <div style="padding:12px;text-align:center;font-size:11px;color:#999;">
+                    Bu mesaj oteks.net teklif formu aracılığıyla gönderilmiştir.
+                </div>
+            </div>`;
+
+        const info = await transporter.sendMail({
+            from: `"OTEKS Teklif Formu" <${process.env.EMAIL_USER}>`,
+            to: recipients.join(', '),
             replyTo: email,
             subject: `Teklif Talebi: ${name} - ${company || 'Belirtilmedi'}`,
-            text: [
-                `Ad Soyad: ${name}`,
-                `E-Posta: ${email}`,
-                `Telefon: ${phone || 'Belirtilmedi'}`,
-                `Firma: ${company || 'Belirtilmedi'}`,
-                ``,
-                `Detaylar:`,
-                details || 'Belirtilmedi'
-            ].join('\n'),
+            text: textBody,
+            html: htmlBody,
+            headers: {
+                'X-Mailer': 'OTEKS Web Form',
+                'X-Priority': '3',
+                'Importance': 'normal'
+            },
             attachments: attachment ? [attachment] : []
+        });
+
+        console.log('Email sent successfully:', {
+            messageId: info.messageId,
+            to: recipients,
+            accepted: info.accepted,
+            rejected: info.rejected,
+            response: info.response
         });
 
         return res.status(200).json({ success: true, message: 'Teklif talebiniz alındı!' });
